@@ -1,8 +1,16 @@
 import ProductData from "./ProductData.mjs";
 import ProductList from "./ProductList.mjs";
 
-const dataSource = new ProductData("tents");
-const element = document.querySelector(".product-list");
-const listing = new ProductList("tents", dataSource, element);
+// 5  Update main.js. Import in loadHeaderFooter and then use that function to load the header and footer into src/index.html
+import { loadHeaderFooter } from "./utils.mjs";
 
-listing.init();
+const dataSource = new ProductData("tents");
+// console.log(dataSource.getData());
+
+const element = document.querySelector(".product-list");
+const productsList = new ProductList("Tents", dataSource, element);
+// console.log(productsList.getData());
+
+productsList.init();
+// 5
+loadHeaderFooter();
