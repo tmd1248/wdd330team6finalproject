@@ -1,8 +1,7 @@
 import { getLocalStorage, loadHeaderFooter } from "./utils.mjs";
-import shoppingCart from "./shoppingCart.mjs"
+import ShoppingCart from "./ShoppingCart.mjs";
 
 loadHeaderFooter();
 
-const cart = new shoppingCart("so-cart", ".product-list");
-
+const cart = new ShoppingCart("so-cart", ".product-list");
 cart.renderCartContents();
