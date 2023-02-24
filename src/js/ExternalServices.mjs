@@ -1,10 +1,11 @@
 //const baseURL = "http://server-nodejs.cit.byui.edu:3000/";
 const baseURL = "https://wdd330-backend.onrender.com/";
-function convertToJson(res) {
+async function convertToJson(res) {
   if (res.ok) {
     return res.json();
   } else {
-    throw new Error("Bad Response");
+    //throw new Error("Bad Response");
+    throw { name: "servicesError", message: "jsonResponse" };
   }
 }
 
