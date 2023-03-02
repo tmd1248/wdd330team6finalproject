@@ -13,11 +13,11 @@ document
 document.querySelector("#checkoutSubmit")
   .addEventListener("click", (e) => {
     e.preventDefault();
-    var myForm = document.forms[0];
-    var chk_status = myForm.checkValidity();
-    myForm.reportValidity();
-    if(chk_status) 
-      myCheckout.checkout();
+    //var myForm = document.forms[0];
+    //var chk_status = myForm.checkValidity();
+    //myForm.reportValidity();
+    //if(chk_status) 
+    myCheckout.checkout();
   });
 
 
