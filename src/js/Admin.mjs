@@ -23,7 +23,6 @@ export default class Admin {
     this.mainElement.innerHTML = loginFormTemplate();
     // now that it is in the DOM we can add a listener for the login button
     document.querySelector("#loginButton").addEventListener("click", (e) => {
-      e.preventDefault();
       const email = document.querySelector("#email").value;
       const password = document.querySelector("#password").value;
       this.login({ email, password }, this.showOrders.bind(this));
