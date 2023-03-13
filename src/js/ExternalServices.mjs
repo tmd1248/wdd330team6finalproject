@@ -1,20 +1,19 @@
-// const baseURL = "http://server-nodejs.cit.byui.edu:3000/";
-const baseURL = "https://wdd330-backend.vercel.app/";
-// const baseURL = "http://localhost:3000/";
+//const baseURL = "http://server-nodejs.cit.byui.edu:3000/";
+const baseURL = "https://wdd330-backend.onrender.com/";
 async function convertToJson(res) {
-  const data = await res.json();
   if (res.ok) {
-    return data;
+    return res.json();
   } else {
-    throw { name: "servicesError", message: data };
+    //throw new Error("Bad Response");
+    throw { name: "servicesError", message: "jsonResponse" };
   }
 }
 
 export default class ExternalServices {
-  constructor(category) {
+  //constructor(category) {
     // this.category = category;
     // this.path = `../json/${this.category}.json`;
-  }
+  //}
   async getData(category) {
     const response = await fetch(baseURL + `products/search/${category}`);
     const data = await convertToJson(response);
@@ -35,6 +34,7 @@ export default class ExternalServices {
     };
     return await fetch(baseURL + "checkout/", options).then(convertToJson);
   }
+
   async loginRequest(user) {
     const options = {
       method: "POST",
@@ -65,3 +65,5 @@ export default class ExternalServices {
     return response;
   }
 }
+
+
