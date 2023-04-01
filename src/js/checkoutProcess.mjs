@@ -69,10 +69,10 @@ export default class CheckoutProcess {
     this.displayOrderTotals();
   }
   displayOrderTotals() {
-    const shipping = document.querySelector(this.outputSelector + " #shipping");
-    const tax = document.querySelector(this.outputSelector + " #tax");
+    const shipping = document.querySelector(this.outputSelector + "#shipping");
+    const tax = document.querySelector(this.outputSelector + "#tax");
     const orderTotal = document.querySelector(
-      this.outputSelector + " #orderTotal"
+      this.outputSelector + "#orderTotal"
     );
     shipping.innerText = "$" + this.shipping;
     tax.innerText = "$" + this.tax;
