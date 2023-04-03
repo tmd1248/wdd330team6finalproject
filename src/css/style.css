@@ -90,6 +90,20 @@ button {
   border: 0;
   font-size: var(--large-font);
 }
+
+a {
+  text-decoration: none;
+}
+s {
+  text-decoration:line-through
+}
+
+button:hover{
+  box-shadow: 10px 10px var(--dark-grey); 
+}
+button:active {
+  background-color: darkgreen;
+}
 .divider {
   border-bottom: 2px solid var(--primary-color);
 }
@@ -285,6 +299,50 @@ button {
   grid-row: 2;
   grid-column: 3;
 }
+
+/* end cart list card styles */
+/* start forum styles */
+
+.row {
+  border-style:solid;
+  border-width: 5px;
+  border-color:black;
+  margin: auto;
+}
+.thread-title-mainpage {
+  margin:0;
+}
+
+.info {
+  display:inline-block;
+  margin:0;
+}
+#comments {
+  font-size:var(--small-font);
+}
+.row > a {
+  text-decoration: none;
+}
+.bottom {
+  display:inline-block;
+}
+.Username{
+  margin:0;
+  margin-left:10px;
+  margin-bottom: 10px;
+}
+.threadnamearea{
+  display:none;
+}
+.usernamearea{
+  display:none;
+}
+.replyarea{
+  width:100%;
+  height:80px;
+  display:none;
+}
+
 
 @media screen and (min-width: 500px) {
   body {
